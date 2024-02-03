@@ -1,0 +1,91 @@
+html {
+    margin: 0;
+    padding: 0;
+    background-color: hsla(179, 62%, 43%, 0.342);
+}
+.container {
+    max-width: 375px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, minmax(100% auto));
+    box-shadow: 2px 4px 10px #1c1c1c3e;
+    border-radius: 5px;
+
+}
+h2 {
+    font-size: 20px;
+}
+.sec-1 {
+    grid-column: span 4;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+}
+.sec-1 h2 {
+    color: hsl(196, 89%, 31%);
+}
+.sec-1 :nth-child(2) {
+    color: hsl(71, 73%, 54%);
+    line-height: 1;
+}
+.sec-1 :nth-child(3) {
+    line-height: 1.5;
+}
+
+/* section one above this point */
+.sec-2 {
+    grid-column: span 4;
+    background-color: hsl(179, 62%, 43%);
+    padding: 20px;
+    color: #fff;
+}
+.sec-2 #dollar {
+    font-size: 25px;
+    font-weight: 700;
+    margin-right: 5px;
+}
+.sec-2 :nth-child(2){
+    display: flex;
+    align-items: center;
+}
+.sec-2 :nth-child(2) :nth-child(2){
+    color: hsla(179, 59%, 65%, 0.854);
+    margin-left: 10px;
+}
+.sign-up {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow:  .8px 8px #1c1c1c33;
+    padding: 15px;
+    background-color: hsl(71, 73%, 54%);
+    cursor: pointer;
+    margin: 40px 0 10px 0;
+}
+.sign-up:hover {
+    background-color: hsl(71, 95%, 40%);
+}
+/* section two above this point */
+.sec-3 {
+    grid-column: span 4;
+    background-color: hsla(179, 62%, 43%, 0.461);
+    padding: 20px;
+    color: #fff;
+    border-radius: 0 0 5px 5px;
+    
+}
+@media screen and (min-width: 940px) {
+    .container{
+        max-width: 740px;
+    }
+    .sec-2 {
+        grid-column: 1/3;
+        border-radius: 0 0 0 5px;
+    }
+    .sec-3 {
+        grid-column: 3/5;
+        text-wrap: balance;
+        line-height: 1.5;
+    }
+}
